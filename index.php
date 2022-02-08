@@ -1,58 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
-.menu {
-  float: left;
-  width: 20%;
-}
-.menuitem {
-  padding: 8px;
-  margin-top: 7px;
-  border-bottom: 1px solid #f1f1f1;
-}
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  overflow: hidden;
-}
-.right {
-  background-color: lightblue;
-  float: left;
-  width: 20%;
-  padding: 10px 15px;
-  margin-top: 7px;
-}
 
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-}
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
-}
+	<!-- <base href="" target="_blank"> -->
+	<meta charset="UTF-8">
+	<title> AEFASDCA </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style id="responsive">
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.menu {
+			float: left;
+			width: 20%;
+		}
+
+		.menuitem {
+			padding: 8px;
+			margin-top: 7px;
+			border-bottom: 1px solid #f1f1f1;
+		}
+
+		.main {
+			float: left;
+			width: 60%;
+			padding: 0 20px;
+			overflow: hidden;
+		}
+
+		.right {
+			background-color: lightblue;
+			float: left;
+			width: 20%;
+			padding: 10px 15px;
+			margin-top: 7px;
+		}
+
+		@media only screen and (max-width:800px) {
+			/* For tablets: */
+  
+			.main {
+				width: 80%;
+				padding: 0;
+			}
+	
+			.right {
+				width: 100%;
+			}
+  
+		}
+
+		@media only screen and (max-width:500px) {
+			/* For mobile phones: */
+  
+			.menu, .main, .right {
+				width: 100%;
+			}
+		}
+
+	</style>
+
+	<style id="text_appearance">
+
+		#header h1 {
+			text-align: center;
+		}
+
 </style>
+
 </head>
+
+
+
 <body style="font-family:Verdana;">
 
-<div style="background-color:#f1f1f1;padding:15px;">
-  <h1>Strona Główna</h1>
-  <h3>Kod strony dostępny na GitHub<p href=""></p></h3>
+<div id="header" style="background-color:#f1f1f1;padding:15px;">
+
+  <h1> AEFASDCA </h1>
+  <h3> Kod strony dostępny na GitHub <p href="https://github.com/aefasdca/aefasdca-ct8"></p></h3>
+  
 </div>
 
 <div style="overflow:auto">
