@@ -7,17 +7,27 @@
 	<title> AEFASDCA </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<style id="responsive">
+	<style id="responsive content">
+	
+		#main-content {
+			height: 70%;
+			display: block;
+			float: right;
+			position: relatve;
+		}
 
 		* {
 			box-sizing: border-box;
 		}
 
 		.main {
+			margin-left: 15%;
 			float: left;
-			width: 60%;
+			width: 65%;
 			padding: 0 20px;
 			overflow: hidden;
+			position: auto;
+			display: block;
 		}
 
 		.right {
@@ -26,12 +36,14 @@
 			width: 20%;
 			padding: 10px 15px;
 			margin-top: 7px;
+			display: block;
 		}
 
 		@media only screen and (max-width:800px) {
 			/* For tablets: */
   
 			.main {
+				margin-left: 0%
 				width: 80%;
 				padding: 0;
 			}
@@ -46,6 +58,7 @@
 			/* For mobile phones: */
   
 			.main, .right {
+				margin-left: 0%
 				width: 100%;
 			}
 		}
@@ -62,47 +75,47 @@
 	
 	<style id="responsive navbar"> 
 
-		.navbar {
-			margin: 0;
-			padding: 0;
-			width: 200px;
+		#navbar {
+			width: 15%;
 			background-color: #f1f1f1;
 			position: fixed;
 			height: 100%;
-			overflow: auto;
 		}
 
-		.navbar a {
+		.al {
 			display: block;
+			width: 100%;
 			color: black;
 			padding: 16px;
 			text-decoration: none;
+			float: none;
 		}
  
-		.navbar a.active {
+		#navbar a.active {
 			background-color: #04AA6D;
 			color: white;
 		}
 
-		.navbar a:hover:not(.active) {
+		#navbar a:hover:not(.active) {
 			background-color: #555;
 			color: white;
 		}
 
-		@media only screen and (max-width: 700px) {
+		@media only screen and (max-width: 800px) {
 			
-			.navbar {
+			#navbar {
+				float: left;
 				width: 100%;
 				height: auto;
 				position: relative;
 			}
 			
-			.navbar a {float: left;}
+			#navbar a {float: left;}
 				div.content {margin-left: 0;}
 			}
 		}
 		
-		@media only screen and (max-width: 400px) {
+		@media only screen and (max-width: 500px) {
 			
 			.navbar a {
 				text-align: center;
@@ -112,21 +125,36 @@
 		
 	</style>
 
+	<style id="responsive header">
+	
+		#header {
+			position: static;
+			top: 5px;
+			display: block;
+			width: 100%;
+			float: top;
+		}
+		
+		
+		#source {
+			display: block;
+		}
+	
+	</style>
+
 <body style="font-family:Verdana;">
 
-<div id="header" style="background-color:#f1f1f1;padding:15px;">
+	<div id="header" style="background-color:#f1f1f1;padding:15px;height:30%;">
+		<h1> AEFASDCA </h1>
+		<h3 id="source" href="https://github.com/aefasdca/aefasdca-ct8" > Kod strony dostępny na GitHub </h3>
+	</div>
 
-  <h1> AEFASDCA </h1>
-  <h3 href="https://github.com/aefasdca/aefasdca-ct8" > Kod strony dostępny na GitHub </h3>
-  
-</div>
-
-	<div style="overflow:auto">
-		<div class="navbar">
-			<a class="menuitem">The Walk</a>
-			<a class="menuitem">Transport</a>
-			<a class="menuitem">History</a>
-			<a class="menuitem">Gallery</a>
+	<div id="main-content" style="overflow:auto">
+		<div id="navbar">
+			<a class="al">The Walk</a>
+			<a class="al">Transport</a>
+			<a class="al">History</a>
+			<a class="al">Gallery</a>
 		</div>
 
 		<div class="main">
@@ -136,14 +164,56 @@
 		</div>
 
 		<div class="right">
-			<h2>What?</h2>
-			<p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
-			<h2>Where?</h2>
-			<p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
-			<h2>Price?</h2>
-			<p>The Walk is free!</p>
+			<h2>Data Powstania Projektu</h2>
+			<p> 08.02.2022 </p>
+			<h2>Cel Powstania Projektu</h2>
+			<p>Strona na przedmioty: <br> Aplikacje Internetowe <br> Projektowanie Stron WWW </p>
+			<h2>Założenia Projektu</h2>
+			<p>Strona zawierać będzie zbiór wszystkich zadań na Aplikacje Internetowe oraz Projektowanie Stron WWW.</p>
+			<p>Strona zawierać będzie zbiór wszystkich zadań na Aplikacje Internetowe oraz Projektowanie Stron WWW.</p>
+			<p>Strona zawierać będzie zbiór wszystkich zadań na Aplikacje Internetowe oraz Projektowanie Stron WWW.</p>
+			<p>Strona zawierać będzie zbiór wszystkich zadań na Aplikacje Internetowe oraz Projektowanie Stron WWW.</p>
+			<p>Strona zawierać będzie zbiór wszystkich zadań na Aplikacje Internetowe oraz Projektowanie Stron WWW.</p>
 		</div>
 	</div>
+	
+	<script>
+	
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+			
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				
+					document.getElementById("header").style.position = "none";
+					document.getElementById("source").style.display = "none";
+					document.getElementById("navbar").style.top = "0";
+					document.getElementById("navbar").style.position = "float";
+					document.getElementById("navbar").style.width = "100%";
+					document.getElementById("navbar").style.height = "10%";
+					document.getElementsByClassName("al").style.float = "left";
+					document.getElementsByClassName("al").style.width = "25%";
+					document.getElementsByClassName("al").style.display = "inline";
+				
+				} else {
+					
+					document.getElementById("source").style.display = "block";
+					document.getElementById("header").style.position = "static";
+					document.getElementById("navbar").style.top = "24%";
+					document.getElementById("navbar").style.position = "fixed";
+					document.getElementById("navbar").style.width = "15%";
+					document.getElementById("navbar").style.height = "100%";
+					document.getElementsByClassName("al").style.float = "none";
+					document.getElementsByClassName("al").style.width = "100%";
+					document.getElementsByClassName("al").style.display = "none";
+					
+				}
+			
+			}
+
+	</script>
+
+
 
 </body>
 </html>
