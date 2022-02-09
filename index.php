@@ -44,12 +44,14 @@
   
 			.main {
 				margin-left: 0%
-				width: 80%;
+				width: 100%;
 				padding: 0;
+				text-align: center;
 			}
 	
 			.right {
-				width: 80%;
+				width: 100%;
+				text-align: center;
 			}
   
 		}
